@@ -1,0 +1,16 @@
+body {
+    font-family: system-ui;
+    background: grey;
+    color: white;
+    text-align: center;
+  }
+
+td.red {
+    background-color:red;
+}
+td.orange {
+    background-color: orange;
+}
+td.green {
+    background-color: green;
+}

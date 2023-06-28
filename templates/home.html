@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type = "text/javascript" 
+      src = "{{ url_for('static', filename = 'response.js') }}" >
+  </script>
+  <title>My Title</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      margin-top: 100px;
+      margin-bottom: 50px;
+    }
+    table, td {
+      border: 1px solid black;
+      margin-left: auto;
+      margin-right: auto;
+    }
+ </style>
+</head>
+<body>
+  <h1>Index Tracker for NGS</h1>  
+    <button id="reset-button" name="reset-button">Reset plate map</button></p>
+    
+<form method="POST">
+  <table id='data'>
+    <tr >
+      <td id="cell1a">A1</td>
+      <td id="cell2a">A2</td>
+      <td id="cell3a">A3</td>
+      <td id="cell4a">A4</td>
+      <td id="cell5a">A5</td>
+      <td id="cell6a">A6</td>
+      <td id="cell7a">A7</td>
+      <td id="cell8a">A8</td>
+      <td id="cell9a">A9</td>
+      <td id="cell10a">A10</td>
+      <td id="cell11a">A11</td>
+      <td id="cell12a">A12</td>
+      <td id="cell13a">A13</td>
+      <td id="cell14a">A14</td>
+      <td id="cell15a">A15</td>
+      <td id="cell16a">A16</td>
+      <td id="cell17a">A17</td>
+      <td id="cell18a">A18</td>
+      <td id="cell19a">A19</td>
+      <td id="cell20a">A20</td>
+      <td id="cell21a">A21</td>
+      <td id="cell22a">A22</td>
+      <td id="cell23a">A23</td>
+      <td id="cell24a">A24</td>
+    </tr>
+    <tr>
+      <td id="cell1b">B1</td>
+      <td id="cell2b">B2</td>
+      <td id="cell3b">B3</td>
+      <td id="cell4b">B4</td>
+      <td id="cell5b">B5</td>
+      <td id="cell6b">B6</td>
+      <td id="cell7b">B7</td>
+      <td id="cell8b">B8</td>
+      <td id="cell9b">B9</td>
+      <td id="cell10b">B10</td>
+      <td id="cell11b">B11</td>
+      <td id="cell12b">B12</td>
+      <td id="cell13b">B13</td>
+      <td id="cell14b">B14</td>
+      <td id="cell15b">B15</td>
+      <td id="cell16b">B16</td>
+      <td id="cell17b">B17</td>
+      <td id="cell18b">B18</td>
+      <td id="cell19b">B19</td>
+      <td id="cell20b">B20</td>
+      <td id="cell21b">B21</td>
+      <td id="cell22b">B22</td>
+      <td id="cell23b">B23</td>
+      <td id="cell24b">B24</td>
+    </tr>
+    <tr>
+      <td id="cell1c">C1</td>
+      <td id="cell2c">C2</td>
+      <td id="cell3c">C3</td>
+      <td id="cell4c">C4</td>
+      <td id="cell5c">C5</td>
+      <td id="cell6c">C6</td>
+      <td id="cell7c">C7</td>
+      <td id="cell8c">C8</td>
+      <td id="cell9c">C9</td>
+      <td id="cell10c">C10</td>
+      <td id="cell11c">C11</td>
+      <td id="cell12c">C12</td>
+      <td id="cell13c">C13</td>
+      <td id="cell14c">C14</td>
+      <td id="cell15c">C15</td>
+      <td id="cell16c">C16</td>
+      <td id="cell17c">C17</td>
+      <td id="cell18c">C18</td>
+      <td id="cell19c">C19</td>
+      <td id="cell20c">C20</td>
+      <td id="cell21c">C21</td>
+      <td id="cell22c">C22</td>
+      <td id="cell23c">C23</td>
+      <td id="cell24c">C24</td>
+    </tr>
+    <tr>
+      <td id="cell1d">D1</td>
+      <td id="cell2d">D2</td>
+      <td id="cell3d">D3</td>
+      <td id="cell4d">D4</td>
+      <td id="cell5d">D5</td>
+      <td id="cell6d">D6</td>
+      <td id="cell7d">D7</td>
+      <td id="cell8d">D8</td>
+      <td id="cell9d">D9</td>
+      <td id="cell10d">D10</td>
+      <td id="cell11d">D11</td>
+      <td id="cell12d">D12</td>
+      <td id="cell13d">D13</td>
+      <td id="cell14d">D14</td>
+      <td id="cell15d">D15</td>
+      <td id="cell16d">D16</td>
+      <td id="cell17d">D17</td>
+      <td id="cell18d">D18</td>
+      <td id="cell19d">D19</td>
+      <td id="cell20d">D20</td>
+      <td id="cell21d">D21</td>
+      <td id="cell22d">D22</td>
+      <td id="cell23d">D23</td>
+      <td id="cell24d">D24</td>
+    </tr>
+    <tr>
+      <td id="cell1e">E1</td>
+      <td id="cell2e">E2</td>
+      <td id="cell3e">E3</td>
+      <td id="cell4e">E4</td>
+      <td id="cell5e">E5</td>
+      <td id="cell6e">E6</td>
+      <td id="cell7e">E7</td>
+      <td id="cell8e">E8</td>
+      <td id="cell9e">E9</td>
+      <td id="cell10e">E10</td>
+      <td id="cell11e">E11</td>
+      <td id="cell12e">E12</td>
+      <td id="cell13e">E13</td>
+      <td id="cell14e">E14</td>
+      <td id="cell15e">E15</td>
+      <td id="cell16e">E16</td>
+      <td id="cell17e">E17</td>
+      <td id="cell18e">E18</td>
+      <td id="cell19e">E19</td>
+      <td id="cell20e">E20</td>
+      <td id="cell21e">E21</td>
+      <td id="cell22e">E22</td>
+      <td id="cell23e">E23</td>
+      <td id="cell24e">E24</td>
+    </tr>
+    <tr>
+      <td id="cell1f">F1</td>
+      <td id="cell2f">F2</td>
+      <td id="cell3f">F3</td>
+      <td id="cell4f">F4</td>
+      <td id="cell5f">F5</td>
+      <td id="cell6f">F6</td>
+      <td id="cell7f">F7</td>
+      <td id="cell8f">F8</td>
+      <td id="cell9f">F9</td>
+      <td id="cell10f">F10</td>
+      <td id="cell11f">F11</td>
+      <td id="cell12f">F12</td>
+      <td id="cell13f">F13</td>
+      <td id="cell14f">F14</td>
+      <td id="cell15f">F15</td>
+      <td id="cell16f">F16</td>
+      <td id="cell17f">F17</td>
+      <td id="cell18f">F18</td>
+      <td id="cell19f">F19</td>
+      <td id="cell20f">F20</td>
+      <td id="cell21f">F21</td>
+      <td id="cell22f">F22</td>
+      <td id="cell23f">F23</td>
+      <td id="cell24f">F24</td>
+    </tr>
+    <tr>
+      <td id="cell1g">G1</td>
+      <td id="cell2g">G2</td>
+      <td id="cell3g">G3</td>
+      <td id="cell4g">G4</td>
+      <td id="cell5g">G5</td>
+      <td id="cell6g">G6</td>
+      <td id="cell7g">G7</td>
+      <td id="cell8g">G8</td>
+      <td id="cell9g">G9</td>
+      <td id="cell10g">G10</td>
+      <td id="cell11g">G11</td>
+      <td id="cell12g">G12</td>
+      <td id="cell13g">G13</td>
+      <td id="cell14g">G14</td>
+      <td id="cell15g">G15</td>
+      <td id="cell16g">G16</td>
+      <td id="cell17g">G17</td>
+      <td id="cell18g">G18</td>
+      <td id="cell19g">G19</td>
+      <td id="cell20g">G20</td>
+      <td id="cell21g">G21</td>
+      <td id="cell22g">G22</td>
+      <td id="cell23g">G23</td>
+      <td id="cell24g">G24</td>
+    </tr>
+    <tr>
+      <td id="cell1h">H1</td>
+      <td id="cell2h">H2</td>
+      <td id="cell3h">H3</td>
+      <td id="cell4h">H4</td>
+      <td id="cell5h">H5</td>
+      <td id="cell6h">H6</td>
+      <td id="cell7h">H7</td>
+      <td id="cell8h">H8</td>
+      <td id="cell9h">H9</td>
+      <td id="cell10h">H10</td>
+      <td id="cell11h">H11</td>
+      <td id="cell12h">H12</td>
+      <td id="cell13h">H13</td>
+      <td id="cell14h">H14</td>
+      <td id="cell15h">H15</td>
+      <td id="cell16h">H16</td>
+      <td id="cell17h">H17</td>
+      <td id="cell18h">H18</td>
+      <td id="cell19h">H19</td>
+      <td id="cell20h">H20</td>
+      <td id="cell21h">H21</td>
+      <td id="cell22h">H22</td>
+      <td id="cell23h">H23</td>
+      <td id="cell24h">H24</td>
+    </tr>
+    <tr>
+      <td id="cell1i">I1</td>
+      <td id="cell2i">I2</td>
+      <td id="cell3i">I3</td>
+      <td id="cell4i">I4</td>
+      <td id="cell5i">I5</td>
+      <td id="cell6i">I6</td>
+      <td id="cell7i">I7</td>
+      <td id="cell8i">I8</td>
+      <td id="cell9i">I9</td>
+      <td id="cell10i">I10</td>
+      <td id="cell11i">I11</td>
+      <td id="cell12i">I12</td>
+      <td id="cell13i">I13</td>
+      <td id="cell14i">I14</td>
+      <td id="cell15i">I15</td>
+      <td id="cell16i">I16</td>
+      <td id="cell17i">I17</td>
+      <td id="cell18i">I18</td>
+      <td id="cell19i">I19</td>
+      <td id="cell20i">I20</td>
+      <td id="cell21i">I21</td>
+      <td id="cell22i">I22</td>
+      <td id="cell23i">I23</td>
+      <td id="cell24i">I24</td>
+    </tr>
+    <tr>
+      <td id="cell1j">J1</td>
+      <td id="cell2j">J2</td>
+      <td id="cell3j">J3</td>
+      <td id="cell4j">J4</td>
+      <td id="cell5j">J5</td>
+      <td id="cell6j">J6</td>
+      <td id="cell7j">J7</td>
+      <td id="cell8j">J8</td>
+      <td id="cell9j">J9</td>
+      <td id="cell10j">J10</td>
+      <td id="cell11j">J11</td>
+      <td id="cell12j">J12</td>
+      <td id="cell13j">J13</td>
+      <td id="cell14j">J14</td>
+      <td id="cell15j">J15</td>
+      <td id="cell16j">J16</td>
+      <td id="cell17j">J17</td>
+      <td id="cell18j">J18</td>
+      <td id="cell19j">J19</td>
+      <td id="cell20j">J20</td>
+      <td id="cell21j">J21</td>
+      <td id="cell22j">J22</td>
+      <td id="cell23j">J23</td>
+      <td id="cell24j">J24</td>
+    </tr>
+    <tr>
+      <td id="cell1k">K1</td>
+      <td id="cell2k">K2</td>
+      <td id="cell3k">K3</td>
+      <td id="cell4k">K4</td>
+      <td id="cell5k">K5</td>
+      <td id="cell6k">K6</td>
+      <td id="cell7k">K7</td>
+      <td id="cell8k">K8</td>
+      <td id="cell9k">K9</td>
+      <td id="cell10k">K10</td>
+      <td id="cell11k">K11</td>
+      <td id="cell12k">K12</td>
+      <td id="cell13k">K13</td>
+      <td id="cell14k">K14</td>
+      <td id="cell15k">K15</td>
+      <td id="cell16k">K16</td>
+      <td id="cell17k">K17</td>
+      <td id="cell18k">K18</td>
+      <td id="cell19k">K19</td>
+      <td id="cell20k">K20</td>
+      <td id="cell21k">K21</td>
+      <td id="cell22k">K22</td>
+      <td id="cell23k">K23</td>
+      <td id="cell24k">K24</td>
+    </tr>
+      <tr>
+      <td id="cell1l">L1</td>
+      <td id="cell2l">L2</td>
+      <td id="cell3l">L3</td>
+      <td id="cell4l">L4</td>
+      <td id="cell5l">L5</td>
+      <td id="cell6l">L6</td>
+      <td id="cell7l">L7</td>
+      <td id="cell8l">L8</td>
+      <td id="cell9l">L9</td>
+      <td id="cell10l">L10</td>
+      <td id="cell11l">L11</td>
+      <td id="cell12l">L12</td>
+      <td id="cell13l">L13</td>
+      <td id="cell14l">L14</td>
+      <td id="cell15l">L15</td>
+      <td id="cell16l">L16</td>
+      <td id="cell17l">L17</td>
+      <td id="cell18l">L18</td>
+      <td id="cell19l">L19</td>
+      <td id="cell20l">L20</td>
+      <td id="cell21l">L21</td>
+      <td id="cell22l">L22</td>
+      <td id="cell23l">L23</td>
+      <td id="cell24l">L24</td>
+    </tr>
+      <tr>
+      <td id="cell1m">M1</td>
+      <td id="cell2m">M2</td>
+      <td id="cell3m">M3</td>
+      <td id="cell4m">M4</td>
+      <td id="cell5m">M5</td>
+      <td id="cell6m">M6</td>
+      <td id="cell7m">M7</td>
+      <td id="cell8m">M8</td>
+      <td id="cell9m">M9</td>
+      <td id="cell10m">M10</td>
+      <td id="cell11m">M11</td>
+      <td id="cell12m">M12</td>
+      <td id="cell13m">M13</td>
+      <td id="cell14m">M14</td>
+      <td id="cell15m">M15</td>
+      <td id="cell16m">M16</td>
+      <td id="cell17m">M17</td>
+      <td id="cell18m">M18</td>
+      <td id="cell19m">M19</td>
+      <td id="cell20m">M20</td>
+      <td id="cell21m">M21</td>
+      <td id="cell22m">M22</td>
+      <td id="cell23m">M23</td>
+      <td id="cell24m">M24</td>
+    </tr>
+      <tr>
+      <td id="cell1n">N1</td>
+      <td id="cell2n">N2</td>
+      <td id="cell3n">N3</td>
+      <td id="cell4n">N4</td>
+      <td id="cell5n">N5</td>
+      <td id="cell6n">N6</td>
+      <td id="cell7n">N7</td>
+      <td id="cell8n">N8</td>
+      <td id="cell9n">N9</td>
+      <td id="cell10n">N10</td>
+      <td id="cell11n">N11</td>
+      <td id="cell12n">N12</td>
+      <td id="cell13n">N13</td>
+      <td id="cell14n">N14</td>
+      <td id="cell15n">N15</td>
+      <td id="cell16n">N16</td>
+      <td id="cell17n">N17</td>
+      <td id="cell18n">N18</td>
+      <td id="cell19n">N19</td>
+      <td id="cell20n">N20</td>
+      <td id="cell21n">N21</td>
+      <td id="cell22n">N22</td>
+      <td id="cell23n">N23</td>
+      <td id="cell24n">N24</td>
+    </tr>
+      <tr>
+      <td id="cell1o">O1</td>
+      <td id="cell2o">O2</td>
+      <td id="cell3o">O3</td>
+      <td id="cell4o">O4</td>
+      <td id="cell5o">O5</td>
+      <td id="cell6o">O6</td>
+      <td id="cell7o">O7</td>
+      <td id="cell8o">O8</td>
+      <td id="cell9o">O9</td>
+      <td id="cell10o">O10</td>
+      <td id="cell11o">O11</td>
+      <td id="cell12o">O12</td>
+      <td id="cell13o">O13</td>
+      <td id="cell14o">O14</td>
+      <td id="cell15o">O15</td>
+      <td id="cell16o">O16</td>
+      <td id="cell17o">O17</td>
+      <td id="cell18o">O18</td>
+      <td id="cell19o">O19</td>
+      <td id="cell20o">O20</td>
+      <td id="cell21o">O21</td>
+      <td id="cell22o">O22</td>
+      <td id="cell23o">O23</td>
+      <td id="cell24o">O24</td>
+    </tr>
+      <tr>
+      <td id="cell1p">P1</td>
+      <td id="cell2p">P2</td>
+      <td id="cell3p">P3</td>
+      <td id="cell4p">P4</td>
+      <td id="cell5p">P5</td>
+      <td id="cell6p">P6</td>
+      <td id="cell7p">P7</td>
+      <td id="cell8p">P8</td>
+      <td id="cell9p">P9</td>
+      <td id="cell10p">P10</td>
+      <td id="cell11p">P11</td>
+      <td id="cell12p">P12</td>
+      <td id="cell13p">P13</td>
+      <td id="cell14p">P14</td>
+      <td id="cell15p">P15</td>
+      <td id="cell16p">P16</td>
+      <td id="cell17p">P17</td>
+      <td id="cell18p">P18</td>
+      <td id="cell19p">P19</td>
+      <td id="cell20p">P20</td>
+      <td id="cell21p">P21</td>
+      <td id="cell22p">P22</td>
+      <td id="cell23p">P23</td>
+      <td id="cell24p">P24</td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>
